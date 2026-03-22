@@ -188,8 +188,7 @@ If your use case requires exact decimal arithmetic (financial calculations,
 tax computations, etc.) you can plug in [Decimal.js](https://mikemcl.github.io/decimal.js/)
 by implementing a custom `Calculator`.
 
-> **Note:** ESCalc itself has zero dependencies. `decimal.js` is an optional
-> peer dependency you install separately.
+> **Note:** ESCalc itself has zero dependencies. `decimal.js` must be installed separately.
 
 ### Install Decimal.js
 
