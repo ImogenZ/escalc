@@ -1,0 +1,12 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "tsBuildInfoFile": "node_modules/tsconfig/lib.tsbuildinfo",
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "rootDir": "src",
+    "outDir": "dist"
+  },
+  "include": ["src", "docs"],
+  "exclude": ["**/*.test.ts", "**/*.bench.ts"]
+}

@@ -1,0 +1,59 @@
+{
+  "name": "escalc",
+  "type": "module",
+  "version": "0.0.1-beta.1",
+  "description": "NCalc expression evaluator",
+  "keywords": [
+    "ncalc",
+    "expression",
+    "evaluator",
+    "parser",
+    "calculator",
+    "math",
+    "formula"
+  ],
+  "author": "ImogenZ",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ImogenZ/escalc.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ImogenZ/escalc/issues"
+  },
+  "sideEffects": false,
+  "exports": {
+    ".": "./dist/index.js",
+    "./package.json": "./package.json"
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "lint": "eslint --cache .",
+    "build": "rollup -c rollup.config.mjs",
+    "test": "vitest --run",
+    "typecheck": "tsc -b --noEmit",
+    "format": "prettier --cache --write .",
+    "release": "bumpp && npm publish",
+    "prepublishOnly": "npm run build",
+    "docs": "typedoc"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@rollup/plugin-terser": "^1.0.0",
+    "@rollup/plugin-typescript": "^12.3.0",
+    "@vitest/eslint-plugin": "^1.6.12",
+    "bumpp": "^11.0.0",
+    "eslint": "^10.0.3",
+    "prettier": "^3.5.3",
+    "rollup": "^4.59.0",
+    "typedoc": "^0.28.17",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.56.1",
+    "vitest": "^4.1.0"
+  }
+}

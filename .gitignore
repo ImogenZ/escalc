@@ -1,0 +1,12 @@
+node_modules
+dist
+docs-dist
+
+*.log
+.DS_Store
+.eslintcache
+
+.rollup.tscache
+*.tsbuildinfo
+
+/docs/.vitepress/cache

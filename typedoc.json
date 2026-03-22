@@ -1,0 +1,19 @@
+{
+  "entryPoints": [
+    "src/index.ts"
+  ],
+  "projectDocuments": [
+    "docs/**/*.md"
+  ],
+  "out": "docs-dist",
+  "exclude": [
+    "**/*.test.ts",
+    "**/*.bench.ts",
+    "**/__tests__/**"
+  ],
+  "includeVersion": true,
+  "readme": "README.md",
+  "name": "ESCalc",
+  "tsconfig": "tsconfig.lib.json",
+  "favicon": "escalc.ico"
+}
