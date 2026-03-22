@@ -33,7 +33,7 @@ jobs:
       - name: Install dependencies
         run: npm install
       - name: Build docs with TypeDoc
-        run: npm docs
+        run: npm run docs
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
