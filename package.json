@@ -18,6 +18,7 @@
     "type": "git",
     "url": "git+https://github.com/ImogenZ/escalc.git"
   },
+  "homepage": "https://imogenz.github.io/escalc/",
   "bugs": {
     "url": "https://github.com/ImogenZ/escalc/issues"
   },
