@@ -32,7 +32,7 @@ function evaluateSafe(
 ### Basic arithmetic
 
 ```ts
-import { evaluate } from "escalc";
+import { evaluate } from "@imogenz/escalc";
 
 evaluate("(3 + 4) * 2"); // => 14
 ```
@@ -77,7 +77,7 @@ If you have already called `parse()` you can pass the `LogicalExpression` direct
 to skip the parse step:
 
 ```ts
-import { parse, evaluate } from "escalc";
+import { parse, evaluate } from "@imogenz/escalc";
 
 const ast = parse("[x] + 1");
 evaluate(ast, { params: new Map([["x", 10]]) }); // => 11
@@ -86,7 +86,7 @@ evaluate(ast, { params: new Map([["x", 10]]) }); // => 11
 ### Safe usage
 
 ```ts
-import { evaluateSafe } from "escalc";
+import { evaluateSafe } from "@imogenz/escalc";
 
 const result = evaluateSafe("1 / [y]", { params: new Map([["y", 0]]) });
 if (result.type === "error") {

@@ -27,7 +27,7 @@ Built-in functions (`Abs`, `Sin`, `if`, `ifs`, etc.) are **excluded** from
 ### Extract parameter names
 
 ```ts
-import { parameters } from "escalc";
+import { parameters } from "@imogenz/escalc";
 
 parameters("[price] * (1 + [taxRate]) - [discount]");
 // => { names: Set { 'price', 'taxRate', 'discount' }, functions: Set {} }
@@ -44,7 +44,7 @@ parameters("myFn([x]) + Abs([x]) + anotherFn([y])");
 ### Validate that all parameters are supplied
 
 ```ts
-import { parameters, evaluate } from "escalc";
+import { parameters, evaluate } from "@imogenz/escalc";
 
 function safeEvaluate(expr: string, values: Record<string, unknown>) {
   const { names } = parameters(expr);
@@ -59,7 +59,7 @@ function safeEvaluate(expr: string, values: Record<string, unknown>) {
 ### Handling invalid expressions
 
 ```ts
-import { parameters } from "escalc";
+import { parameters } from "@imogenz/escalc";
 
 try {
   const result = parameters(userInput);

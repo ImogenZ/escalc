@@ -32,7 +32,7 @@ preserves the operator precedence implied by the AST structure.
 ## Examples
 
 ```ts
-import { format } from "escalc";
+import { format } from "@imogenz/escalc";
 
 // Normalise whitespace
 format("1+2"); // => '1 + 2'
@@ -51,7 +51,7 @@ Combine `parse` and `format` to normalise any expression to a canonical form bef
 storing or displaying it:
 
 ```ts
-import { format } from "escalc";
+import { format } from "@imogenz/escalc";
 
 function normalise(expr: string): string {
   return format(expr);
@@ -63,7 +63,7 @@ normalise("  ( [x]+[y] ) * 2 "); // => '[x] + [y] * 2'
 ## Safe usage
 
 ```ts
-import { formatSafe } from "escalc";
+import { formatSafe } from "@imogenz/escalc";
 
 const result = formatSafe(userInput);
 if (result.type === "error") {

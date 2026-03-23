@@ -7,7 +7,7 @@ Complete worked examples showing ESCalc in real-world scenarios.
 ## 1. Simple arithmetic and comparisons
 
 ```ts
-import { evaluate } from "escalc";
+import { evaluate } from "@imogenz/escalc";
 
 // Arithmetic
 evaluate("(3 + 4) * 2"); // => 14
@@ -34,7 +34,7 @@ evaluate("!false"); // => true
 Compute a final price after applying a discount tier and tax:
 
 ```ts
-import { evaluate } from "escalc";
+import { evaluate } from "@imogenz/escalc";
 
 function calcPrice(
   unitPrice: number,
@@ -62,7 +62,7 @@ calcPrice(10, 5, 0.1, 0.2); // => 54  (10 * 5 * 0.9 * 1.2)
 Register custom functions to extend the expression language:
 
 ```ts
-import { evaluate, type ExpressionFunction } from "escalc";
+import { evaluate, type ExpressionFunction } from "@imogenz/escalc";
 
 const upper: ExpressionFunction = (args) =>
   (args[0].evaluate() as string).toUpperCase();
@@ -96,7 +96,7 @@ evaluate('startsWith([code], "UK")', {
 Parse once to validate user input, then reuse the AST for repeated evaluation:
 
 ```ts
-import { parseSafe, execute, parameters } from "escalc";
+import { parseSafe, execute, parameters } from "@imogenz/escalc";
 
 function buildEvaluator(formula: string) {
   const result = parseSafe(formula);
@@ -129,7 +129,7 @@ calcTax({ amount: 500, rate: 0.1 }); // => 50
 ## 5. Multi-branch conditional with `ifs`
 
 ```ts
-import { evaluate } from "escalc";
+import { evaluate } from "@imogenz/escalc";
 
 function tier(score: number): string {
   return evaluate(
@@ -149,7 +149,7 @@ tier(40); // => 'F'
 ## 6. Date comparisons
 
 ```ts
-import { evaluate } from "escalc";
+import { evaluate } from "@imogenz/escalc";
 
 // Date literals are written as #YYYY-MM-DD#
 evaluate("#2024-06-01# > #2024-01-01#"); // => true

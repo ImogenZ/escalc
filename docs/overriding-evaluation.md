@@ -9,7 +9,7 @@ Register functions as a `Map<string, ExpressionFunction>` and
 pass them via the `functions` option:
 
 ```ts
-import { evaluate, type ExpressionFunction } from "escalc";
+import { evaluate, type ExpressionFunction } from "@imogenz/escalc";
 
 const repeat: ExpressionFunction = (args) => {
   const str = args[0].evaluate() as string;
@@ -49,7 +49,7 @@ const ifElse: ExpressionFunction = (args) => {
 Supply parameters that should only be computed when accessed using `lazyParams`:
 
 ```ts
-import { evaluate } from "escalc";
+import { evaluate } from "@imogenz/escalc";
 
 evaluate("[useCache] || [fetchData]", {
   params: new Map([["useCache", true]]),
@@ -70,7 +70,7 @@ The easiest approach is to extend `StandardCalculator` and override only the
 methods you want to change:
 
 ```ts
-import { StandardCalculator, type CalculatorArgument } from "escalc";
+import { StandardCalculator, type CalculatorArgument } from "@imogenz/escalc";
 
 /** A calculator that concatenates strings with + as well as adding numbers. */
 class StringAwareCalculator extends StandardCalculator {
@@ -84,7 +84,7 @@ class StringAwareCalculator extends StandardCalculator {
   }
 }
 
-import { evaluate } from "escalc";
+import { evaluate } from "@imogenz/escalc";
 
 evaluate('"Hello, " + [name]', {
   params: new Map([["name", "world"]]),
@@ -97,7 +97,7 @@ evaluate('"Hello, " + [name]', {
 Implement the full `Calculator` interface when you need complete control:
 
 ```ts
-import { type Calculator, type CalculatorArgument } from "escalc";
+import { type Calculator, type CalculatorArgument } from "@imogenz/escalc";
 
 class MyCalculator implements Calculator {
   add(left: CalculatorArgument, right: CalculatorArgument): unknown {
@@ -123,7 +123,7 @@ import {
   type ValueExpression,
   type FunctionExpression,
   type TernaryExpression,
-} from "escalc";
+} from "@imogenz/escalc";
 
 /** Count the number of parameter references in an expression. */
 class ParameterCounter extends AbstractVisitor<number> {
@@ -160,7 +160,7 @@ counter.logical(ast); // => 3  (a appears twice, b once)
 For advanced scenarios you can construct `StandardEvaluator` manually:
 
 ```ts
-import { parse, StandardEvaluator, StandardCalculator } from "escalc";
+import { parse, StandardEvaluator, StandardCalculator } from "@imogenz/escalc";
 
 const evaluator = new StandardEvaluator({
   params: new Map([["x", 10]]),
@@ -204,7 +204,7 @@ import {
   StandardCalculator,
   type CalculatorArgument,
   ESCalcError,
-} from "escalc";
+} from "@imogenz/escalc";
 
 function dec(arg: CalculatorArgument): Decimal {
   const value = arg.evaluate();
@@ -283,7 +283,7 @@ export class DecimalCalculator extends StandardCalculator {
 ### Usage
 
 ```ts
-import { evaluate } from "escalc";
+import { evaluate } from "@imogenz/escalc";
 import { DecimalCalculator } from "./decimal-calculator";
 
 const calc = new DecimalCalculator();

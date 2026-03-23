@@ -1,7 +1,7 @@
 # escalc
 
-![npm](https://img.shields.io/npm/v/escalc)
-![Downloads](https://img.shields.io/npm/dw/escalc)
+![npm](https://img.shields.io/npm/v/@imogenz/escalc)
+![Downloads](https://img.shields.io/npm/dw/@imogenz/escalc)
 
 <img src="escalc.png" alt="ESCalc logo" width="120" />
 
@@ -24,7 +24,7 @@ yarn add escalc
 ## Quick start
 
 ```ts
-import { evaluate } from "escalc";
+import { evaluate } from "@imogenz/escalc";
 
 // Basic arithmetic
 evaluate("1 + 2"); // => 3
@@ -40,7 +40,7 @@ evaluate("[price] * (1 + [tax])", {
 }); // => 120
 
 // Safe variant - no throwing
-import { evaluateSafe } from "escalc";
+import { evaluateSafe } from "@imogenz/escalc";
 const result = evaluateSafe(userInput);
 if (result.type === "success") console.log(result.result);
 ```
