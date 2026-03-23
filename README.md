@@ -1,7 +1,7 @@
 # escalc
 
-![npm](https://img.shields.io/npm/v/escalc)
-![Downloads](https://img.shields.io/npm/dw/escalc)
+![npm](https://img.shields.io/npm/v/@imogenz/escalc)
+![Downloads](https://img.shields.io/npm/dw/@imogenz/escalc)
 
 <img src="escalc.png" alt="ESCalc logo" width="120" />
 
