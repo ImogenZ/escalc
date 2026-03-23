@@ -3,11 +3,11 @@
 ## Installation
 
 ```bash
-npm install escalc
+npm install @imogenz/escalc
 # or
-pnpm add escalc
+pnpm add @imogenz/escalc
 # or
-yarn add escalc
+yarn add @imogenz/escalc
 ```
 
 ## Your first expression
