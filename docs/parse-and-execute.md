@@ -10,7 +10,7 @@ separately when you need to:
 ## Parsing
 
 ```ts
-import { parse, parseSafe } from "escalc";
+import { parse, parseSafe } from "@imogenz/escalc";
 
 // Throws ParserError on syntax errors
 const ast = parse("[price] * (1 + [tax])");
@@ -34,7 +34,7 @@ With `stopOnFirstError: false` the parser collects all errors it can recover fro
 and attaches the partial AST as `incompleteExpression`:
 
 ```ts
-import { parseSafe } from "escalc";
+import { parseSafe } from "@imogenz/escalc";
 
 const result = parseSafe("1 + + 2", { stopOnFirstError: false });
 if (result.type === "error") {
@@ -47,7 +47,7 @@ if (result.type === "error") {
 ## Executing
 
 ```ts
-import { execute, executeSafe } from "escalc";
+import { execute, executeSafe } from "@imogenz/escalc";
 
 const ast = parse("[x] ** 2");
 
@@ -68,7 +68,7 @@ execute(ast, { params: new Map([["x", 4]]) }); // => 16
 ## Parse once, run many times
 
 ```ts
-import { parse, execute } from "escalc";
+import { parse, execute } from "@imogenz/escalc";
 
 const formula = parse("[base] + [bonus] * [multiplier]");
 
@@ -95,7 +95,7 @@ The `LogicalExpression` type is a discriminated union. Every node has a `type`
 property you can switch on:
 
 ```ts
-import { parse, type LogicalExpression } from "escalc";
+import { parse, type LogicalExpression } from "@imogenz/escalc";
 
 function countNodes(expr: LogicalExpression): number {
   switch (expr.type) {

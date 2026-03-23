@@ -1,5 +1,5 @@
 {
-  "name": "escalc",
+  "name": "@imogenz/escalc",
   "type": "module",
   "version": "0.0.1-beta.1",
   "description": "NCalc expression evaluator",

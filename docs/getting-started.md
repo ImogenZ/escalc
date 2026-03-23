@@ -13,7 +13,7 @@ yarn add escalc
 ## Your first expression
 
 ```ts
-import { evaluate } from "escalc";
+import { evaluate } from "@imogenz/escalc";
 
 evaluate("1 + 2"); // => 3
 evaluate("10 % 3"); // => 1
@@ -27,7 +27,7 @@ Parameters are referenced in expressions using `[name]` or `{name}` syntax.
 Supply their values via the `params` option:
 
 ```ts
-import { evaluate } from "escalc";
+import { evaluate } from "@imogenz/escalc";
 
 evaluate("[price] * (1 + [taxRate])", {
   params: new Map([
@@ -57,7 +57,7 @@ union `{ type: 'success', result }` or `{ type: 'error', error }` instead of
 throwing. Use these when you cannot guarantee the expression is valid:
 
 ```ts
-import { evaluateSafe } from "escalc";
+import { evaluateSafe } from "@imogenz/escalc";
 
 const result = evaluateSafe("[x] + 1", { params: new Map([["x", 5]]) });
 
